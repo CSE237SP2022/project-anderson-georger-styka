@@ -11,10 +11,14 @@ public class Stopwatch implements ActionListener{
 	JLabel timeDisplay = new JLabel();
 	
 	int timeElapsed;
-	int hours;
-	int minutes;
-	int seconds;
-	int milliseconds;
+	// int hours;
+	int mins;
+	int secs;
+	int milsecs;
+    // String hoursString = String.format("0%2d", hours);
+    String minsString = String.format("0%2d", mins);
+    String secsString = String.format("0%2d", secs);
+    String milsecsString = String.format("0%2d", milsecs);
 	boolean running = false;
 	
 	
