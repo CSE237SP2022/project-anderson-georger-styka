@@ -4,6 +4,7 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		Game play;
 		double min = 0.0
 		double max = 1.1
@@ -43,6 +44,23 @@ public class main {
 			System.out.print("Player 1 Score =" + play.getPlayer1Score() + "Player 2 Score =" + play.getPlayer2Score());
 
 		}
+=======
+		Game play = new Game();
+		
+		while(play.getTurnNum() < 5) {
+				if(play.getPlayerTurn()) {
+					play.updatePlay1Score(play.playHalf());
+					//System.out.print(getScore)
+					play.nextTurn();
+				}
+				else{
+					play.updatePlay2Score(play.playHalf());
+					//System.out.print(getScore)
+					play.nextTurn();
+				}
+				System.out.print("Turn: " + play.getTurnNum() + "; Player 1 Score = " + play.getPlayer1Score() + "; Player 2 Score = " + play.getPlayer2Score() + "\n");
+			}
+>>>>>>> d37135e (Adjusted Main)
 	}
 
 }

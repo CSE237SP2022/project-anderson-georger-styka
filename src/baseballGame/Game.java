@@ -4,8 +4,8 @@ public class Game {
 	
 	private int turnNum = 0;
 	private boolean playerTurn = true;
-	private Player player1;
-	private Player player2;
+	private Player player1 = new Player();
+	private Player player2 = new Player();
 	
 	
 	public int getTurnNum(){
@@ -32,7 +32,7 @@ public class Game {
 		this.player2.addScore(num);
 	}
 	
-	private void nextTurn() {
+	public void nextTurn() {
 		if(this.playerTurn) {
 			this.playerTurn = false;
 		}
@@ -44,16 +44,16 @@ public class Game {
 	
 	public int playHalf() {
 		double n =  Math.random();
-		if(n < 1/6) {
+		if(n < 0.167) {
 			return 1;
 		}
-		else if(n < 1/3) {
+		else if(n < 0.333) {
 			return 2;
 		}
-		else if(n < 1/2) {
+		else if(n < 0.5) {
 			return 3;
 		}
-		else if(n < 2/3) {
+		else if(n < 0.667) {
 			return 4;
 		}
 		else {
