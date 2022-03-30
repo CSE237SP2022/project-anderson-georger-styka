@@ -1,16 +1,18 @@
 package baseballGame;
 
-public class main {
+
+public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Game play;
-		double min = 0.0
-		double max = 1.1
+		Game play = new Game();
+		double min = 0.0;
+		double max = 1.1;
 		int holder;
 		
 		while(play.getTurnNum() < 5) {
-			double randomNumber = (double)Math.floor(Math.random()*(max-min+1)+min);
+			//double randomNumber = (double)Math.floor(Math.random()*(max-min+1)+min);
+			double randomNumber = (double)(Math.random() * 1.1);
 				if(randomNumber < 0.7) {
 					holder = 0;
 				}
@@ -21,7 +23,7 @@ public class main {
 					holder = 2;
 				}
 				else if(randomNumber < 1.0) {
-					this.score = 3;
+					holder = 3;
 				}
 				else if(randomNumber > 1.0 && randomNumber < 1.1) {
 					holder = 4;
@@ -39,10 +41,13 @@ public class main {
 				//System.out.print(getScore)
 				play.nextTurn();
 			}
-		}
-			System.out.print("Player 1 Score =" + play.getPlayer1Score() + "Player 2 Score =" + play.getPlayer2Score());
+			System.out.println("Round " + play.getTurnNum() + ":");
+			System.out.println("Player 1 Score = " + play.getPlayer1Score());
+			System.out.println("Player 2 Score = " + play.getPlayer2Score());
+			System.out.println();
 
 		}
+			
 	}
-
 }
+
