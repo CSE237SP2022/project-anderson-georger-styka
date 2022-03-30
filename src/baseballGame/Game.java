@@ -32,7 +32,7 @@ public class Game {
 		this.player2.addScore(num);
 	}
 	
-	public void nextTurn() {
+	private void nextTurn() {
 		if(this.playerTurn) {
 			this.playerTurn = false;
 		}
@@ -40,6 +40,26 @@ public class Game {
 			this.playerTurn = true;
 			this.turnNum ++;
 		}
+	}
+	
+	public int playHalf() {
+		double n =  Math.random();
+		if(n < 1/6) {
+			return 1;
+		}
+		else if(n < 1/3) {
+			return 2;
+		}
+		else if(n < 1/2) {
+			return 3;
+		}
+		else if(n < 2/3) {
+			return 4;
+		}
+		else {
+			return 0;
+		}
+		
 	}
 	
 	public void resetGame() {

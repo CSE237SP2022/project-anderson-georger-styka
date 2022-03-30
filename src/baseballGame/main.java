@@ -43,7 +43,6 @@ public class main {
 			System.out.print("Player 1 Score =" + play.getPlayer1Score() + "Player 2 Score =" + play.getPlayer2Score());
 
 		}
-		
 	}
 
 }
