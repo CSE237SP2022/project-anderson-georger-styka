@@ -4,8 +4,8 @@ public class Game {
 	
 	private int turnNum = 0;
 	private boolean playerTurn = true;
-	private Player player1 = new Player();
-	private Player player2 = new Player();
+	public Player player1 = new Player();
+	public Player player2 = new Player();
 	
 	
 	public int getTurnNum(){
