@@ -11,7 +11,6 @@ public class Main {
 		int holder;
 		
 		while(play.getTurnNum() < 5) {
-			//double randomNumber = (double)Math.floor(Math.random()*(max-min+1)+min);
 			double randomNumber = (double)(Math.random() * 1.1);
 				if(randomNumber < 0.7) {
 					holder = 0;
@@ -33,12 +32,10 @@ public class Main {
 				}
 			if(play.getPlayerTurn()) {
 				play.updatePlay1Score(holder);
-				//System.out.print(getScore)
 				play.nextTurn();
 			}
 			else{
 				play.updatePlay2Score(holder);
-				//System.out.print(getScore)
 				play.nextTurn();
 			}
 			System.out.println("Round " + play.getTurnNum() + ":");
