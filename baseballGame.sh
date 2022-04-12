@@ -2,6 +2,5 @@
 
 cd src/baseballGame
 
-javac Main.java
-
-java Main
+javac -classpath ..  Main.java
+java -classpath .. baseballGame/Main
