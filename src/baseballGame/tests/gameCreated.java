@@ -1,10 +1,12 @@
-package test;
+package baseballGame.tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class playerCreated extends gameTest {
+import baseballGame.Game;
+
+class gameCreated extends Game {
 
 	@Test
 	void test() {
