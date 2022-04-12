@@ -9,8 +9,8 @@ import baseballGame.Game;
 class gameCreated extends Game {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testGameCreation() {
+		Game game = new Game();
+		assertEquals( game.getTurnNum(), 0);
 	}
-
 }

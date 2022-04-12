@@ -46,7 +46,8 @@ public class Main {
 					
 				case "start":
 					
-					play = new Game();
+					play.resetGame();
+					postGameInput = "";
 					
 					while(play.getTurnNum() < 6) {
 						//double randomNumber = (double)Math.floor(Math.random()*(max-min+1)+min);
@@ -97,14 +98,17 @@ public class Main {
 						System.out.println("It's a tie! Great game!");
 					}
 					
-					System.out.println("\nWould you like to play again? (yes/no)");
+
 					
-					postGameInput = read.nextLine();
+					while(!postGameInput.equals("yes") && !postGameInput.equals("no")) {
+						System.out.println("\nWould you like to play again? (yes/no)");
+						postGameInput = read.nextLine();
+					}
 					
 					if(postGameInput.equals("yes")) {
 						System.out.println("\nLet's run it back!!");
 					}
-					else if(postGameInput.equals("no")) {
+					else {
 						userInput = "quit";
 					}
 					break;
