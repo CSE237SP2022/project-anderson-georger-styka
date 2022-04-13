@@ -25,3 +25,4 @@ Next, we needed to create more interactivity with the user. To do so, we created
 
 We then had to approach the Stopwatch situation as before we accidentally used an interface that was banned from this project. So, we found resources online explaining how to keep track of time in java, therefore we can use this in order to find the difference in time between keyboard clicks. Finding this difference in time will give the user more interactivity, creating the final output of the game we want including scoring based on the time elapsed.
 
+We then added a base runner aspect to the game and also outs. This better simulates a baseball game and allows useres to play a full game. We still need to print out base runners, but scores and outs update correctly.
