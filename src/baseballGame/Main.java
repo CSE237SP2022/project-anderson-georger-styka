@@ -70,20 +70,32 @@ public class Main {
 							else {
 								holder = 0;
 							}
+//							System.out.print(play.getTurnNum() + ": " + holder + "\n");
 						if(play.getPlayerTurn()) {
-							play.updatePlay1Score(holder);
+							
 							//System.out.print(getScore)
+							System.out.println("Top Half of Round " + play.getTurnNum() + ":");
+							System.out.println("The batter got "+ holder + " base(s).");
+							play.updatePlay1Score(holder);
+							System.out.println("There are " + play.getOuts() + " out(s).");
+							System.out.println("Player 1 Score = " + play.getPlayer1Score());
+							System.out.println("Player 2 Score = " + play.getPlayer2Score());
+							System.out.println();
 							play.nextTurn();
+							
 						}
 						else{
-							play.updatePlay2Score(holder);
 							//System.out.print(getScore)
+							System.out.println("Bottom Half of Round " + play.getTurnNum() + ":");
+							System.out.println("The batter got "+ holder + " base(s).");
+							play.updatePlay2Score(holder);
+							System.out.println("There are " + play.getOuts() + " out(s).");
+							System.out.println("Player 1 Score = " + play.getPlayer1Score());
+							System.out.println("Player 2 Score = " + play.getPlayer2Score());
+							System.out.println();
 							play.nextTurn();
 						}
-						System.out.println("Round " + play.getTurnNum() + ":");
-						System.out.println("Player 1 Score = " + play.getPlayer1Score());
-						System.out.println("Player 2 Score = " + play.getPlayer2Score());
-						System.out.println();
+						
 
 					}
 					
