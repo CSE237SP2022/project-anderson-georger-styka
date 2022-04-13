@@ -14,6 +14,7 @@ The turns function still has some bugs, but works, and the stopwatch is still un
 
 We have made a bash script to run the game, so it should be intuitive.
 
+
 Iteration 2:
 In this iteration, we attempted to make-up the work we had previously failed to attend to (Kanban, Unit Testing) as well as create more complexity within our game.
 To begin, we fixed the bash scripting file as before it did not include the --classpath flag, which originally caused many errors. After some research, we figured out how to ascertain the Main class's usage of the other classes in the directory they are all stored in.
