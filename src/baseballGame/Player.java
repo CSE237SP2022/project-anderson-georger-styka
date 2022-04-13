@@ -3,10 +3,10 @@ package baseballGame;
 
 public class Player {
 	private int score;
-	private Runner one = new Runner();
-	private Runner two = new Runner();
-	private Runner three = new Runner();
-	private Runner four = new Runner();
+	public Runner one = new Runner();
+	public Runner two = new Runner();
+	public Runner three = new Runner();
+	public Runner four = new Runner();
 	
 	public int getScore() {
 		return this.score;
