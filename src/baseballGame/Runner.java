@@ -8,15 +8,19 @@ public class Runner {
 	public Boolean updatePosition(int pos) {
 		this.position += pos;
 		if(this.position < 4) {
-			return true;
+			return false;
 		}
 		else {
-			return false;
+			return true;
 		}
 	}
 	
 	public int getPosition() {
 		return this.position;
+	}
+
+	public void reset(){
+		this.position = 0;
 	}
 
 }
