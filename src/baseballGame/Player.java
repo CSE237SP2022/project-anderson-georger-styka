@@ -12,6 +12,9 @@ public class Player {
 		return this.score;
 	}
 	
+	//Updates the score of the game using the position of the runners.
+	//It updates the position of four runners bases on how many bases the hitter got
+	//If the runner position is updated to 4 or more the score gets updated
 	public void addScore(int num) {
 		if(one.getPosition() == 0){
 			if(one.updatePosition(num)){
@@ -66,6 +69,11 @@ public class Player {
 			return;
 		}
 		
+	}
+	
+	public int[] getRunnerPos() {
+		int[] t = {this.one.getPosition(), this.two.getPosition(), this.three.getPosition(), this.four.getPosition()};
+		return t;
 	}
 	
 	public void resetRunners() {

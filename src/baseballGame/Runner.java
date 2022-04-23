@@ -16,7 +16,6 @@ public class Runner {
 	}
 	
 	public int getPosition() {
-//		System.out.print(this.position);
 		return this.position;
 	}
 
