@@ -10,6 +10,7 @@ public class Main {
 		double min = 0.0;
 		double max = 1.1;
 		int holder;
+		int[] runners;
 		String userInput = "";
 		String postGameInput = "";
 		
@@ -70,31 +71,90 @@ public class Main {
 							else {
 								holder = 0;
 							}
-//							System.out.print(play.getTurnNum() + ": " + holder + "\n");
 						if(play.getPlayerTurn()) {
+							System.out.println("Top Half of Round " +(play.getTurnNum() + 1)+ ":");
+							runners = play.getRunnersP1();
+							if(runners[0] == 2 || runners[1] == 2 || runners[2] == 2 || runners[3] == 2){
+								System.out.println("          _          ");
+								System.out.println("         |\u2588|         ");
+							}
+							else {
+								System.out.println("          _          ");
+								System.out.println("         |_|         ");
+							}
 							
-							//System.out.print(getScore)
-							System.out.println("Top Half of Round " + play.getTurnNum() + ":");
+							System.out.println("        /   \\        ");
+							System.out.println("       /     \\       ");
+							System.out.println("     _/       \\_     ");
+							boolean first = (runners[0] == 1 || runners[1] == 1 || runners[2] == 1 || runners[3] == 1);
+							boolean third = (runners[0] == 3 || runners[1] == 3 || runners[2] == 3 || runners[3] == 3);
+							if(first && third) {
+								System.out.println("    |\u2588|       |\u2588|    ");
+							}
+							else if(first) {
+								System.out.println("    |_|       |\u2588|    ");
+							}
+							else if(third) {
+								System.out.println("    |\u2588|       |_|    ");
+							}
+							else {
+								System.out.println("    |_|       |_|    ");
+							}
+							runners = null;
+							System.out.println("      \\   _   /      ");
+							System.out.println("       \\     /       ");
+							System.out.println("        \\ _ /        ");
+							System.out.println("         |_|         ");
+							System.out.println("      Batter Up!     ");
 							System.out.println("The batter got "+ holder + " base(s).");
 							play.updatePlay1Score(holder);
-							System.out.println("There are " + play.getOuts() + " out(s).");
-							System.out.println("Player 1 Score = " + play.getPlayer1Score());
-							System.out.println("Player 2 Score = " + play.getPlayer2Score());
-							System.out.println();
-							play.nextTurn();
 							
 						}
 						else{
-							//System.out.print(getScore)
-							System.out.println("Bottom Half of Round " + play.getTurnNum() + ":");
+							System.out.println("Bottom Half of Round " + (play.getTurnNum() + 1) + ":");
+							runners = play.getRunnersP2();
+							if(runners[0] == 2 || runners[1] == 2 || runners[2] == 2 || runners[3] == 2){
+								System.out.println("          _          ");
+								System.out.println("         |\u2588|         ");
+							}
+							else {
+								System.out.println("          _          ");
+								System.out.println("         |_|         ");
+							}
+							
+							System.out.println("        /   \\        ");
+							System.out.println("       /     \\       ");
+							System.out.println("     _/       \\_     ");
+							boolean first = (runners[0] == 1 || runners[1] == 1 || runners[2] == 1 || runners[3] == 1);
+							boolean third = (runners[0] == 3 || runners[1] == 3 || runners[2] == 3 || runners[3] == 3);
+							if(first && third) {
+								System.out.println("    |\u2588|       |\u2588|    ");
+							}
+							else if(first) {
+								System.out.println("    |_|       |\u2588|    ");
+							}
+							else if(third) {
+								System.out.println("    |\u2588|       |_|    ");
+							}
+							else {
+								System.out.println("    |_|       |_|    ");
+							}
+							runners = null;
+							System.out.println("      \\   _   /      ");
+							System.out.println("       \\     /       ");
+							System.out.println("        \\ _ /        ");
+							System.out.println("         |_|         ");
+							System.out.println("      Batter Up!     ");
 							System.out.println("The batter got "+ holder + " base(s).");
 							play.updatePlay2Score(holder);
-							System.out.println("There are " + play.getOuts() + " out(s).");
-							System.out.println("Player 1 Score = " + play.getPlayer1Score());
-							System.out.println("Player 2 Score = " + play.getPlayer2Score());
-							System.out.println();
-							play.nextTurn();
+							
+							
 						}
+						System.out.println("There are " + play.getOuts() + " out(s).");
+						System.out.println("Player 1 Score = " + play.getPlayer1Score());
+						System.out.println("Player 2 Score = " + play.getPlayer2Score());
+						System.out.println();
+						play.nextTurn();
 						
 
 					}

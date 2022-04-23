@@ -61,6 +61,14 @@ public class Game {
 		
 	}
 	
+	public int[] getRunnersP1() {
+		return this.player1.getRunnerPos();
+	}
+	
+	public int[] getRunnersP2() {
+		return this.player2.getRunnerPos();
+	}
+	
 	public int getOuts() {
 		return this.outs;
 	}
