@@ -72,80 +72,14 @@ public class Main {
 								holder = 0;
 							}
 						if(play.getPlayerTurn()) {
-							System.out.println("Top Half of Round " +(play.getTurnNum() + 1)+ ":");
 							runners = play.getRunnersP1();
-							if(runners[0] == 2 || runners[1] == 2 || runners[2] == 2 || runners[3] == 2){
-								System.out.println("          _          ");
-								System.out.println("         |\u2588|         ");
-							}
-							else {
-								System.out.println("          _          ");
-								System.out.println("         |_|         ");
-							}
-							
-							System.out.println("        /   \\        ");
-							System.out.println("       /     \\       ");
-							System.out.println("     _/       \\_     ");
-							boolean first = (runners[0] == 1 || runners[1] == 1 || runners[2] == 1 || runners[3] == 1);
-							boolean third = (runners[0] == 3 || runners[1] == 3 || runners[2] == 3 || runners[3] == 3);
-							if(first && third) {
-								System.out.println("    |\u2588|       |\u2588|    ");
-							}
-							else if(first) {
-								System.out.println("    |_|       |\u2588|    ");
-							}
-							else if(third) {
-								System.out.println("    |\u2588|       |_|    ");
-							}
-							else {
-								System.out.println("    |_|       |_|    ");
-							}
-							runners = null;
-							System.out.println("      \\   _   /      ");
-							System.out.println("       \\     /       ");
-							System.out.println("        \\ _ /        ");
-							System.out.println("         |_|         ");
-							System.out.println("      Batter Up!     ");
-							System.out.println("The batter got "+ holder + " base(s).");
+							printTurns(runners, 1, play.getTurnNum(), holder);
 							play.updatePlay1Score(holder);
 							
 						}
 						else{
-							System.out.println("Bottom Half of Round " + (play.getTurnNum() + 1) + ":");
 							runners = play.getRunnersP2();
-							if(runners[0] == 2 || runners[1] == 2 || runners[2] == 2 || runners[3] == 2){
-								System.out.println("          _          ");
-								System.out.println("         |\u2588|         ");
-							}
-							else {
-								System.out.println("          _          ");
-								System.out.println("         |_|         ");
-							}
-							
-							System.out.println("        /   \\        ");
-							System.out.println("       /     \\       ");
-							System.out.println("     _/       \\_     ");
-							boolean first = (runners[0] == 1 || runners[1] == 1 || runners[2] == 1 || runners[3] == 1);
-							boolean third = (runners[0] == 3 || runners[1] == 3 || runners[2] == 3 || runners[3] == 3);
-							if(first && third) {
-								System.out.println("    |\u2588|       |\u2588|    ");
-							}
-							else if(first) {
-								System.out.println("    |_|       |\u2588|    ");
-							}
-							else if(third) {
-								System.out.println("    |\u2588|       |_|    ");
-							}
-							else {
-								System.out.println("    |_|       |_|    ");
-							}
-							runners = null;
-							System.out.println("      \\   _   /      ");
-							System.out.println("       \\     /       ");
-							System.out.println("        \\ _ /        ");
-							System.out.println("         |_|         ");
-							System.out.println("      Batter Up!     ");
-							System.out.println("The batter got "+ holder + " base(s).");
+							printTurns(runners, 2, play.getTurnNum(), holder);
 							play.updatePlay2Score(holder);
 							
 							
@@ -193,5 +127,57 @@ public class Main {
 		}
 			
 	}
+	
+	/**
+	 * This function is a helper method to make the printing in the main function cleaner
+	 * @param runners > the runners that are on base
+	 * @param player > which player is playing
+	 * @param turn > the amount of turns that have been played
+	 * @param bases > the result of the batter
+	 */
+	public static void printTurns(int[] runners, int player, int turn, int bases) {
+		if(player == 1) {
+			System.out.println("Top Half of Round " + (turn + 1)+ ":");
+
+		}
+		else {
+			System.out.println("Bottom Half of Round " + (turn + 1)+ ":");
+
+		}
+		if(runners[0] == 2 || runners[1] == 2 || runners[2] == 2 || runners[3] == 2){
+			System.out.println("          _          ");
+			System.out.println("         |\u2588|         ");
+		}
+		else {
+			System.out.println("          _          ");
+			System.out.println("         |_|         ");
+		}
+		
+		System.out.println("        /   \\        ");
+		System.out.println("       /     \\       ");
+		System.out.println("     _/       \\_     ");
+		boolean first = (runners[0] == 1 || runners[1] == 1 || runners[2] == 1 || runners[3] == 1);
+		boolean third = (runners[0] == 3 || runners[1] == 3 || runners[2] == 3 || runners[3] == 3);
+		if(first && third) {
+			System.out.println("    |\u2588|       |\u2588|    ");
+		}
+		else if(first) {
+			System.out.println("    |_|       |\u2588|    ");
+		}
+		else if(third) {
+			System.out.println("    |\u2588|       |_|    ");
+		}
+		else {
+			System.out.println("    |_|       |_|    ");
+		}
+		runners = null;
+		System.out.println("      \\   _   /      ");
+		System.out.println("       \\     /       ");
+		System.out.println("        \\ _ /        ");
+		System.out.println("         |_|         ");
+		System.out.println("      Batter Up!     ");
+		System.out.println("The batter got "+ bases + " base(s).");
+	}
 }
+
 
