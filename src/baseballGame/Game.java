@@ -61,6 +61,28 @@ public class Game {
 		
 	}
 	
+	public int batterOutcome() {
+		double randomNumber = (double)(Math.random() * 1.1);
+		if(randomNumber < 0.7) {
+			return 0;
+		}
+		else if(randomNumber < 0.8) {
+			return 1;
+		}
+		else if(randomNumber < 0.9) {
+			return 2;
+		}
+		else if(randomNumber < 1.0) {
+			return 3;
+		}
+		else if(randomNumber > 1.0 && randomNumber < 1.1) {
+			return 4;
+		}
+		else {
+			return 0;
+		}
+	}
+	
 	public int[] getRunnersP1() {
 		return this.player1.getRunnerPos();
 	}
