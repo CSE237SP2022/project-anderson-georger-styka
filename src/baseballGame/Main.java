@@ -74,12 +74,23 @@ public class Main {
 						if(play.getPlayerTurn()) {
 							runners = play.getRunnersP1();
 							printTurns(runners, 1, play.getTurnNum(), holder);
-							play.updatePlay1Score(holder);
+							userInput = read.nextLine();
+							if(userInput.equals("")) {
+								System.out.println("The batter got "+ holder + " base(s).");
+								play.updatePlay1Score(holder);
+							}
+							else if(userInput == "quit") {
+								break;
+							}
+							else {
+								System.out.println("(Press the space bar to play)");
+							}
 							
 						}
 						else{
 							runners = play.getRunnersP2();
 							printTurns(runners, 2, play.getTurnNum(), holder);
+							System.out.println("The batter got "+ holder + " base(s).");
 							play.updatePlay2Score(holder);
 							
 							
@@ -175,8 +186,8 @@ public class Main {
 		System.out.println("       \\     /       ");
 		System.out.println("        \\ _ /        ");
 		System.out.println("         |_|         ");
-		System.out.println("      Batter Up!     ");
-		System.out.println("The batter got "+ bases + " base(s).");
+		System.out.println("      Batter Up!      ");
+		System.out.println("(Press the space bar to play)");
 	}
 }
 
