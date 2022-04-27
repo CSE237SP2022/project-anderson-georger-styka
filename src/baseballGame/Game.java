@@ -28,7 +28,6 @@ public class Game {
 	public void updatePlay1Score(int num) {
 		if(num == 0) {
 			this.outs ++;
-//			System.out.print(this.outs);
 		}
 		else {
 			this.player1.addScore(num);
@@ -39,7 +38,6 @@ public class Game {
 	public void updatePlay2Score(int num) {
 		if(num == 0) {
 			this.outs ++;
-//			System.out.print(this.outs);
 		}
 		else {
 			this.player2.addScore(num);

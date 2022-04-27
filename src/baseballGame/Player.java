@@ -17,60 +17,35 @@ public class Player {
 	//If the runner position is updated to 4 or more the score gets updated
 	public void addScore(int num) {
 		if(one.getPosition() == 0){
-			if(one.updatePosition(num)){
-				this.score ++;
-				one.reset();
-			}
+			this.addScoreHelper(one, num);
 			return;
 		}
 		else if(two.getPosition() == 0){
-			if(one.updatePosition(num)){
-				this.score ++;
-				one.reset();
-			}
-			if(two.updatePosition(num)){
-				this.score ++;
-				two.reset();
-			}
+			this.addScoreHelper(one, num);
+			this.addScoreHelper(two, num);
 			return;
 		}
 		else if(three.getPosition() == 0){
-			if(one.updatePosition(num)){
-				this.score ++;
-				one.reset();
-			}
-			if(two.updatePosition(num)){
-				this.score ++;
-				two.reset();
-			}
-			if(three.updatePosition(num)){
-				this.score ++;
-				three.reset();
-			}
+			this.addScoreHelper(one, num);
+			this.addScoreHelper(two, num);
+			this.addScoreHelper(three, num);
 			return;
 		}
 		else if(four.getPosition() == 0){
-			if(one.updatePosition(num)){
-				this.score ++;
-				one.reset();
-			}
-			if(two.updatePosition(num)){
-				this.score ++;
-				two.reset();
-			}
-			if(three.updatePosition(num)){
-				this.score ++;
-				three.reset();
-			}
-			if(four.updatePosition(num)){
-				this.score ++;
-				four.reset();
-			}
+			this.addScoreHelper(one, num);
+			this.addScoreHelper(two, num);
+			this.addScoreHelper(three, num);
+			this.addScoreHelper(four, num);
 			return;
 		}
-		
 	}
-	
+
+	public void addScoreHelper (Runner r, int num) {
+		if(r.updatePosition(num)){
+			this.score ++;
+			r.reset();
+		}
+	}
 	public int[] getRunnerPos() {
 		int[] t = {this.one.getPosition(), this.two.getPosition(), this.three.getPosition(), this.four.getPosition()};
 		return t;
