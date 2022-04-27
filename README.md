@@ -26,3 +26,15 @@ Next, we needed to create more interactivity with the user. To do so, we created
 We then had to approach the Stopwatch situation as before we accidentally used an interface that was banned from this project. So, we found resources online explaining how to keep track of time in java, therefore we can use this in order to find the difference in time between keyboard clicks. Finding this difference in time will give the user more interactivity, creating the final output of the game we want including scoring based on the time elapsed.
 
 We then added a base runner aspect to the game and also outs. This better simulates a baseball game and allows useres to play a full game. We still need to print out base runners, but scores and outs update correctly.
+
+
+Iteration #3:
+In our final iteration of the project, we focused on cleaning up our code, creating an easier-to-understand printing method for the gameplay, and added much more unit testing.
+
+We first pivoted our gameplay displays from stdDraw to simple character printing, where we use certain characters to look like a baseball diamond and show the positions of runners on base and the number of outs currently. We didn't want to spend too much time working with a foreign tool, so we used a simple printing method to get the output we wanted that we knew any user could understand.
+
+We then added much more unit testing. We initially set-up our testing incorrectly by creating a new JUnit class for each test instead of one for each class, so we made changes to that. Now, we have three JUnit testing classes: Player, Game, and Runner. These three classes hold methods that need extensive testing due to their overall functionalities. Not only do we test each method used, but we also test many different cases of updating the score and baserunners to ascertain the game's accuracy of gameplay.
+
+Finally, we cleaned up our code as much as possible. We made sure that all of our methods (except for a printing method in our Menu class which received approval from Prof. Shook to keep) were under 20 lines of code to keep them concise, so we added many helper methods where needed. We made sure to delete the extra class files created from the bash script running, we reorganized the unit tests in order to create more structure, and we removed any leftover comments or print lines that were unnecessary in the final product.
+
+Overall, we learned a lot about how to sustain a clean code base as well as how to supplement all functionality of a program with unit testing. It is very important to have as much unit testing as possible, and we believe that adding many more tests in this iteration was helpful in finalizing the functionality of our program.
