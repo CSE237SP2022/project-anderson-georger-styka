@@ -139,6 +139,18 @@ class PlayerClassTest extends Player {
 	}
 	
 	@Test
+	void addScoreHelperPositionTest() {
+		player.addScoreHelper(player.one, 3);
+		assertEquals(player.one.getPosition(), 3);
+	}
+	
+	@Test
+	void addScoreHelperScoreTest() {
+		player.addScoreHelper(player.one, 4);
+		assertEquals(player.getScore(), 1);
+	}
+	
+	@Test
 	void resetPlayerTest() {
 		player.addScore(2);
 		player.addScore(1);
